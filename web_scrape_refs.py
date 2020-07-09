@@ -1,6 +1,5 @@
 
 
-#from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
 import time
@@ -12,7 +11,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Chrome(executable_path = 'C://Users//yz14091//OneDrive - University of Bristol//Documents//EnergyRev//chromedriver')
+driver = webdriver.Chrome(executable_path = 'C://Users//yz14091//Documents//chromedriver')
 driver.set_window_size(1400,1000)
 
 my_url= "https://pmt-eu.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,%22energy%20system%22%20OR%20%22energy%20sector%22%20OR%20%22energy%20industry%22,AND&query=any,contains,%22skills%20gap%22%20OR%20%22skills%20mismatch%22%20OR%20%22skills%20shortage%22%20OR%20%22skills%20needs%22%20OR%20%22skills%20requirements%22,AND&query=any,contains,model,AND&query=any,contains,jobs,AND&pfilter=lang,exact,eng,AND&tab=default_tab&search_scope=default_scope&sortby=rank&vid=44BU_VU1&lang=en_US&mode=advanced&offset=0"
@@ -63,6 +62,6 @@ while True:
 		print('End of search results')
 
 
-refs = pd.DataFrame(citation_list).to_csv('C://Users//yz14091//OneDrive - University of Bristol//Documents//EnergyRev//refs.csv')
+refs = pd.DataFrame(citation_list).to_csv('C://Users//yz14091//Documents//refs.csv')
 
 
